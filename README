@@ -1,2 +1,10 @@
-This repository is is used to archive the tested CNFET based SRAM cell .
-Mainly about read and write delay.
+  This repository is is used to archive the tested CNFET based SRAM cell .
+  The tests is mainly about read and write delay.
+  The sram schematics are built by candence. To use the Stanford CNFET Model, you can create symbols with veriloga file like this:
+  
+  PCNFET_L1 : include files left as-is - so the entire content was as it was in the download from Stanford
+  PCNFET_L2 : remove the `include "PCNFET_L1.va" but add `include "parameters.vams" instead.
+  PCNFET : use the code from the file PCNFET_L3.va, but remove the `include "PCNFET_L2.va" and add `include "parameters.vams" instead
+  
+  while building schematic, only use PCNFET.
+  And also, you can use the HSPICE model. 
